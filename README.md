@@ -1,0 +1,1 @@
+This is a repository for creating a multi-node puppet configuration.

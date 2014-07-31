@@ -1,0 +1,21 @@
+---
+:backends:
+  - yaml
+ 
+:hierarchy:
+  - by-data_center/%{data_center}/%{security_zone}
+  - by-data_center/%{data_center}/%{security_zone}/%{swenv}
+  - by-env/%{swenv}
+  - by-host/%{fqdn}
+  - by-platform/%{platform}
+  - by-platform/%{platform}/%{domain}
+  - by-platform/%{platform}/%{domain}/%{swenv}
+  - common
+ 
+:yaml:
+# datadir is empty here, so hiera uses its defaults:
+# # - /var/lib/hiera on *nix
+# # - %CommonAppData%\PuppetLabs\hiera\var on Windows
+# # When specifying a datadir, make sure the directory exists.
+   :datadir: '/puppet/HieraData'
+
